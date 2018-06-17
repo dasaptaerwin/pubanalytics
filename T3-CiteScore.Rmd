@@ -1,0 +1,62 @@
+---
+title: "T3-CiteScore-2017"
+output: html_notebook
+---
+
+# Methods
+
+## Data preparation
+
+1. download Cite Score 2017 (version April 2018), published 30 May 2018, format xls, size +/- 17 MB link,
+2. sort data based on Publisher's country column, select Indonesia,
+3. convert columns with score to number. For unknown reason, original Cite Score data use text format for all columns, including columns with score,
+4. rename columns for easy reading in csv format,
+5. save as in utf-8 csv format.
+
+## Data analysis
+
+1. basic statistics
+2. multivariate statistics
+
+## Individual journal check
+
+1. website
+2. article check:
+
+  - sum of article
+  - highest cited article
+  - lowest cited article
+  - etc to be added
+
+```{r}
+df = read.csv('prep-data-citescore-ID-Apr-2018.csv')
+head(df)
+str(df)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+```{r}
+# installing and loading libraries
+
+#install.packages('FactoMineR')
+#install.packages('factoextra')
+#install.packages('tidyverse')
+```
+
+```{r}
+library('tidyverse')
+library('FactoMineR')
+library('factoextra')
+```
+
+
+```{r}
+# visualization
+ggplot(df, aes(x='2017_cs', y='2017_sjr')) + geom_line()
+```
+
