@@ -1,11 +1,11 @@
 # analysis Indonesian journal
 
-## loading data
+## loading data: for Indonesian data only
 
 df = read.csv('prep_data/prep-data-citescore-ID-Apr-2018.csv')
 head(df)
 str(df)
-row.names(df2) <- df2$no
+row.names(df) <- df$source_short_title
 
 ## installing and loading libraries
 install.packages('tidyverse')
@@ -23,19 +23,19 @@ library('wesanderson')
 ## basic stats
 
 ### histogram 2017 cs, sjr, snip
-p1 = ggplot(df2, aes(x=X2017cs)) +
+p1 = ggplot(df, aes(x=X2017cs)) +
   geom_histogram() +
   theme_light() +
   theme(axis.text.x = element_text(angle=45, size=8, hjust=1))
 p1 = p1 + expand_limits(x=c(0,100))
 
-p2 = ggplot(df2, aes(x=X2017sjr)) +
+p2 = ggplot(df, aes(x=X2017sjr)) +
   geom_histogram() +
   theme_light() +
   theme(axis.text.x = element_text(angle=45, size=8, hjust=1))
 p2 = p2 + expand_limits(x=c(0,100))
 
-p3 = ggplot(df2, aes(x=X2017snip)) +
+p3 = ggplot(df, aes(x=X2017snip)) +
   geom_histogram() +
   theme_light() +
   theme(axis.text.x = element_text(angle=45, size=8, hjust=1))
@@ -90,13 +90,11 @@ p1 = ggplot(df, aes(x=pub_group_short, y=X2017snip)) +
   geom_boxplot() + 
   theme_light() +
   theme(axis.text.x = element_text(angle=45, size=8, hjust=1)) + ylim(0, 2)
-p1
 
 p2 = ggplot(df, aes(x=pub_group_short, y=X2016snip)) + 
   geom_boxplot() + 
   theme_light() +
   theme(axis.text.x = element_text(angle=45, size=8, hjust=1)) + ylim(0, 2)
-p2
 
 p3 = ggplot(df, aes(x=pub_group_short, y=X2015snip)) + 
   geom_boxplot() + 
@@ -106,6 +104,32 @@ p3 = ggplot(df, aes(x=pub_group_short, y=X2015snip)) +
 grid.arrange(p1, p2, p3, ncol=1)
 
 ## add new plot here ###
+
+## loading data: for complete data
+
+df2 = read.csv('prep_data/cite_score_2017.csv', sep = '\t')
+head(df2)
+str(df)
+row.names(df2) <- df2$source_id
+
+## plot all data citescore 2017
+p1 = ggplot(df2, aes(x=source_title, y=X2017cs)) + 
+  geom_boxplot() + 
+  theme_light() +
+  theme(axis.text.x = element_text(angle=45, size=8, hjust=1)) + ylim(0, 2)
+p1
+
+p2 = ggplot(df, aes(x=pub_group_short, y=X2016snip)) + 
+  geom_boxplot() + 
+  theme_light() +
+  theme(axis.text.x = element_text(angle=45, size=8, hjust=1)) + ylim(0, 2)
+
+p3 = ggplot(df, aes(x=pub_group_short, y=X2015snip)) + 
+  geom_boxplot() + 
+  theme_light() +
+  theme(axis.text.x = element_text(angle=45, size=8, hjust=1)) + ylim(0, 2)
+
+grid.arrange(p1, p2, p3, ncol=1)
 
 
 ## correlations
@@ -180,3 +204,78 @@ df2 = read.csv('prep_data/cite_score_2017.csv')
 head(df2)
 str(df2)
 row.names(df) <- df$source_short_title
+
+### cs, sjr, snip 2015
+
+p1 = ggplot(data = df2, aes(x=X2015cs, y=X2015sjr, color = pub_country)) + 
+  geom_point() + 
+  xlim(0, 2) + ylim(0, 2) + 
+  theme(legend.position = 'none') 
+p1
+
+p2 = ggplot(data = df2, aes(x=X2015cs, y=X2015snip, color = pub_country)) + 
+  geom_point() + 
+  xlim(0, 2) + ylim(0, 2) + 
+  theme(legend.position = 'none') 
+p2
+
+grid.arrange(p1, p2, ncol=2)
+
+### cs, sjr, snip 2016
+
+p1 = ggplot(data = df2, aes(x=X2016cs, y=X2016sjr, color = pub_country)) + 
+  geom_point() + 
+  xlim(0, 2) + ylim(0, 2) + 
+  theme(legend.position = 'none') 
+p1
+
+p2 = ggplot(data = df2, aes(x=X2016cs, y=X2016snip, color = pub_country)) + 
+  geom_point() + 
+  xlim(0, 2) + ylim(0, 2) + 
+  theme(legend.position = 'none') 
+p2
+
+grid.arrange(p1, p2, ncol=2)
+
+/home/dr/Documents/2018/pubanalytics/plots/comp_scatterplot_cs_snip_sjr_2015.png
+
+### cs, sjr, snip 2017
+
+p1 = ggplot(data = df2, aes(x=X2017cs, y=X2017sjr)) + 
+  geom_point(color='dark grey') + 
+  xlim(0, 150) + ylim(0, 100) + 
+  theme_light() +
+  geom_smooth(method = lm) +
+  stat_ellipse(type = "norm")
+p1
+p2 = ggplot(data = df2, aes(x=X2017cs, y=X2017snip)) + 
+  geom_point(color='dark grey') + 
+  xlim(0, 150) + ylim(0, 100) + 
+  theme_light() +
+  geom_smooth(method = lm)
+p2
+grid.arrange(p1, p2, ncol=2)
+
+p1 = ggplot(data = df2, 
+            aes(x=X2017cs, y=X2017sjr, color = status)) + 
+  geom_point() + 
+  xlim(0, 75) + ylim(0, 50) + 
+  theme_light() +
+  geom_smooth(method = lm) +
+  stat_ellipse(type = "norm")
+p1
+p2 = ggplot(data = df2, aes(x=X2017cs, y=X2017snip)) + 
+  geom_point(color='dark grey') + 
+  xlim(0, 75) + ylim(0, 40) + 
+  theme_light() +
+  geom_smooth(method = lm) +
+  stat_ellipse(type = "norm")
+p2
+grid.arrange(p1, p2, ncol=2)
+
+#+
+  annotate("text",
+           itb.points$X2015cs,
+           itb.points$X2015snip,
+           label="ITB",
+           hjust=-0.1, vjust=1)
