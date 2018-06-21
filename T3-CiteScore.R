@@ -224,9 +224,23 @@ p2 = ggplot(data = df2, aes(x=X2015cs, y=X2015snip)) +
 p2
 grid.arrange(p1, p2, ncol=2)
 
+p1 = ggplot(data = df2, aes(x=X2015cs, y=X2015sjr)) + 
+  geom_point(color='dark grey') +  
+  xlim(0, 20) + ylim(0, 20) + 
+  theme_light() +
+  geom_smooth(method = lm) 
+p1
+p2 = ggplot(data = df2, aes(x=X2015cs, y=X2015snip)) + 
+  geom_point(color='dark grey') + 
+  xlim(0, 20) + ylim(0, 20) + 
+  theme_light() +
+  geom_smooth(method = lm)
+p2
+grid.arrange(p1,p2,ncol=2)
+
 ### cs, sjr, snip 2016
 
-ggplot(data = df2, aes(x=X2016cs, y=X2016sjr)) + 
+p1 = ggplot(data = df2, aes(x=X2016cs, y=X2016sjr)) + 
   geom_point(color='dark grey') + 
   xlim(0, 150) + ylim(0, 100) + 
   theme_light() +
@@ -242,6 +256,21 @@ p2 = ggplot(data = df2, aes(x=X2016cs, y=X2016snip)) +
   stat_ellipse(type = "norm")
 p2
 grid.arrange(p1, p2, ncol=2)
+
+p1 = ggplot(data = df2, aes(x=X2016cs, y=X2016sjr)) + 
+  geom_point(color='dark grey') +  
+  xlim(0, 20) + ylim(0, 20) + 
+  theme_light() +
+  geom_smooth(method = lm) 
+p1
+p2 = ggplot(data = df2, aes(x=X2016cs, y=X2016snip)) + 
+  geom_point(color='dark grey') + 
+  xlim(0, 20) + ylim(0, 20) + 
+  theme_light() +
+  geom_smooth(method = lm)
+p2
+grid.arrange(p1,p2,ncol=2)
+
 
 ### cs, sjr, snip 2017
 
@@ -260,25 +289,20 @@ p2 = ggplot(data = df2, aes(x=X2017cs, y=X2017snip)) +
   stat_ellipse(type = "norm")
 p2
 grid.arrange(p1, p2, ncol=2)
-png('/plots/comp_scatterplot_cs_snip_sjr_2017.png')
 
-p1 = ggplot(data = df2, 
-            aes(x=X2017cs, 
-                y=X2017sjr)) + 
-  geom_point(color='dark grey') +
-  xlim(0, 75) + ylim(0, 50) + 
+p1 = ggplot(data = df2, aes(x=X2017cs, y=X2017sjr)) + 
+  geom_point(color='dark grey') + 
+  xlim(0, 20) + ylim(0, 20) + 
   theme_light() +
-  geom_smooth(method = lm) +
-  stat_ellipse(type = "norm")
+  geom_smooth(method = lm) 
 p1
 p2 = ggplot(data = df2, aes(x=X2017cs, y=X2017snip)) + 
   geom_point(color='dark grey') + 
-  xlim(0, 75) + ylim(0, 50) + 
+  xlim(0, 20) + ylim(0, 20) + 
   theme_light() +
-  geom_smooth(method = lm) +
-  stat_ellipse(type = "norm")
+  geom_smooth(method = lm)
 p2
-grid.arrange(p1, p2, ncol=2)
+grid.arrange(p1,p2,ncol=2)
 
 
 #+
