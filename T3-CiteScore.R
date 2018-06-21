@@ -207,37 +207,41 @@ row.names(df) <- df$source_short_title
 
 ### cs, sjr, snip 2015
 
-p1 = ggplot(data = df2, aes(x=X2015cs, y=X2015sjr, color = pub_country)) + 
-  geom_point() + 
-  xlim(0, 2) + ylim(0, 2) + 
-  theme(legend.position = 'none') 
+p1 = ggplot(data = df2, aes(x=X2015cs, y=X2015sjr)) + 
+  geom_point(color='dark grey') + 
+  xlim(0, 150) + ylim(0, 100) + 
+  theme_light() +
+  geom_smooth(method = lm) +
+  stat_ellipse(type = "norm")
 p1
 
-p2 = ggplot(data = df2, aes(x=X2015cs, y=X2015snip, color = pub_country)) + 
-  geom_point() + 
-  xlim(0, 2) + ylim(0, 2) + 
-  theme(legend.position = 'none') 
+p2 = ggplot(data = df2, aes(x=X2015cs, y=X2015snip)) + 
+  geom_point(color='dark grey') + 
+  xlim(0, 150) + ylim(0, 100) + 
+  theme_light() +
+  geom_smooth(method = lm) +
+  stat_ellipse(type = "norm")
 p2
-
 grid.arrange(p1, p2, ncol=2)
 
 ### cs, sjr, snip 2016
 
-p1 = ggplot(data = df2, aes(x=X2016cs, y=X2016sjr, color = pub_country)) + 
-  geom_point() + 
-  xlim(0, 2) + ylim(0, 2) + 
-  theme(legend.position = 'none') 
+ggplot(data = df2, aes(x=X2016cs, y=X2016sjr)) + 
+  geom_point(color='dark grey') + 
+  xlim(0, 150) + ylim(0, 100) + 
+  theme_light() +
+  geom_smooth(method = lm) +
+  stat_ellipse(type = "norm")
 p1
 
-p2 = ggplot(data = df2, aes(x=X2016cs, y=X2016snip, color = pub_country)) + 
-  geom_point() + 
-  xlim(0, 2) + ylim(0, 2) + 
-  theme(legend.position = 'none') 
+p2 = ggplot(data = df2, aes(x=X2016cs, y=X2016snip)) + 
+  geom_point(color='dark grey') + 
+  xlim(0, 150) + ylim(0, 100) + 
+  theme_light() +
+  geom_smooth(method = lm) +
+  stat_ellipse(type = "norm")
 p2
-
 grid.arrange(p1, p2, ncol=2)
-
-/home/dr/Documents/2018/pubanalytics/plots/comp_scatterplot_cs_snip_sjr_2015.png
 
 ### cs, sjr, snip 2017
 
@@ -252,13 +256,16 @@ p2 = ggplot(data = df2, aes(x=X2017cs, y=X2017snip)) +
   geom_point(color='dark grey') + 
   xlim(0, 150) + ylim(0, 100) + 
   theme_light() +
-  geom_smooth(method = lm)
+  geom_smooth(method = lm) +
+  stat_ellipse(type = "norm")
 p2
 grid.arrange(p1, p2, ncol=2)
+png('/plots/comp_scatterplot_cs_snip_sjr_2017.png')
 
 p1 = ggplot(data = df2, 
-            aes(x=X2017cs, y=X2017sjr, color = status)) + 
-  geom_point() + 
+            aes(x=X2017cs, 
+                y=X2017sjr)) + 
+  geom_point(color='dark grey') +
   xlim(0, 75) + ylim(0, 50) + 
   theme_light() +
   geom_smooth(method = lm) +
@@ -266,12 +273,13 @@ p1 = ggplot(data = df2,
 p1
 p2 = ggplot(data = df2, aes(x=X2017cs, y=X2017snip)) + 
   geom_point(color='dark grey') + 
-  xlim(0, 75) + ylim(0, 40) + 
+  xlim(0, 75) + ylim(0, 50) + 
   theme_light() +
   geom_smooth(method = lm) +
   stat_ellipse(type = "norm")
 p2
 grid.arrange(p1, p2, ncol=2)
+
 
 #+
   annotate("text",
