@@ -304,10 +304,179 @@ p2 = ggplot(data = df2, aes(x=X2017cs, y=X2017snip)) +
 p2
 grid.arrange(p1,p2,ncol=2)
 
+### correlation analysis
 
-#+
-  annotate("text",
-           itb.points$X2015cs,
-           itb.points$X2015snip,
-           label="ITB",
-           hjust=-0.1, vjust=1)
+# installing corrplot
+install.packages('corrplot') # for making pretty pairs plot
+library('corrplot')
+library('RColorBrewer') # color library
+
+# making new dataframe for correl analysis
+c = select(df2, X2015cs:X2017snip) 
+cc = cor(c, use = "pairwise.complete.obs") # using pairwise because there're many NAs
+corrplot(cc, type="upper", order="hclust",
+         col=brewer.pal(n=8, name="RdYlBu"))
+
+
+# JOURNAL ANALYSIS
+## loading data
+jmfs = read.csv('prep_data/itb-jmfs.csv')
+tel =  read.csv('prep_data/telkomnika.csv')
+ternak =  read.csv('prep_data/j-peternakan.csv')
+muslim =  read.csv('prep_data/ij-muslimsoc.csv')
+ijog =  read.csv('prep_data/ij-og.csv')
+ijaseit =  read.csv('prep_data/ij-aseit.csv')
+ijg =  read.csv('prep_data/ij-geography.csv')
+medica =  read.csv('prep_data/j-actamedica.csv')
+agriv =  read.csv('prep_data/j-agrivita.csv')
+hayati =  read.csv('prep_data/j-hayati.csv')
+
+## plotting article distribution
+p1 = ggplot(jmfs, aes(x=Year)) +
+  geom_bar(position=position_dodge(0.9))+
+  theme_light() +
+  labs(title="ITB JMFS+ITB JoS") +
+  xlim(2005, 2018) +
+  ylim(0, 350) 
+  
+p2 = ggplot(tel, aes(x=Year)) +
+  geom_bar(position=position_dodge(0.9))+
+  theme_light() +
+  labs(title="Telkomnika") +
+  xlim(2005, 2018) +
+  ylim(0, 350)
+
+p3 = ggplot(ternak, aes(x=Year)) +
+  geom_bar(position=position_dodge(0.9))+
+  theme_light() +
+  labs(title="Media Peternakan") +
+  xlim(2005, 2018) +
+  ylim(0, 350)
+
+p4 = ggplot(muslim, aes(x=Year)) +
+  geom_bar(position=position_dodge(0.9))+
+  theme_light() +
+  labs(title="IMS") +
+  xlim(2005, 2018) +
+  ylim(0, 350)
+
+p5 = ggplot(ijog, aes(x=Year)) +
+  geom_bar(position=position_dodge(0.9))+
+  theme_light() +
+  labs(title="IJOG") +
+  xlim(2005, 2018) +
+  ylim(0, 350)
+
+p6 = ggplot(ijaseit, aes(x=Year)) +
+  geom_bar(position=position_dodge(0.9))+
+  theme_light() +
+  labs(title="IJASEIT")+
+  ylim(0,350)
+
+p7 = ggplot(ijg, aes(x=Year)) +
+  geom_bar(position=position_dodge(0.9))+
+  theme_light() +
+  labs(title="IJG") +
+  xlim(2005, 2018) +
+  ylim(0, 350)
+
+p8 = ggplot(medica, aes(x=Year)) +
+  geom_bar(position=position_dodge(0.9))+
+  theme_light() +
+  labs(title="AMI") +
+  xlim(2005, 2018) +
+  ylim(0, 350)
+
+p9 = ggplot(agriv, aes(x=Year)) +
+  geom_bar(position=position_dodge(0.9))+
+  theme_light() +
+  labs(title="Agrivita") +
+  xlim(2005, 2018) +
+  ylim(0, 350)
+
+p10 = ggplot(hayati, aes(x=Year)) +
+  geom_bar(position=position_dodge(0.9))+
+  theme_light() +
+  labs(title="Hayati") +
+  xlim(2005, 2018) +
+  ylim(0, 350)
+
+grid.arrange(p1,p2,p3,p4,p5,p6,p7,p8,p9,p10, ncol=5)
+
+dev.off()
+
+## plotting citation distribution
+
+p1 = ggplot(jmfs, aes(x=Cited.by)) +
+  geom_histogram() +
+  theme_light() +
+  labs(title="ITB JMFS+ITB JoS") +
+  ylim(0,250) +
+  xlim(0,50)
+
+p2 = ggplot(tel, aes(x=Cited.by)) +
+  geom_histogram() +
+  theme_light() +
+  labs(title="Telkomnika") +
+  ylim(0,250) +
+  xlim(0,50)
+
+p3 = ggplot(ternak, aes(x=Cited.by)) +
+  geom_histogram() +
+  theme_light() +
+  labs(title="Media Peternakan") +
+  ylim(0,250) +
+  xlim(0,50)
+
+p4 = ggplot(muslim, aes(x=Cited.by)) +
+  geom_histogram(stat='count') +
+  theme_light() +
+  labs(title="IMS") +
+  ylim(0,250) +
+  xlim(0,50)
+
+p5 = ggplot(ijog, aes(x=Cited.by)) +
+  geom_histogram(stat='count') +
+  theme_light() +
+  labs(title="IJOG") +
+  ylim(0,250) +
+  xlim(0,50)
+
+p6 = ggplot(ijaseit, aes(x=Cited.by)) +
+  geom_histogram() +
+  theme_light() +
+  labs(title="IJASEIT") +
+  ylim(0,250) +
+  xlim(0,50)
+
+p7 = ggplot(ijg, aes(x=Cited.by)) +
+  geom_histogram() +
+  theme_light() +
+  labs(title="IJG") +
+  ylim(0,250) +
+  xlim(0,50)
+
+p8 = ggplot(medica, aes(x=Cited.by)) +
+  geom_histogram() +
+  theme_light() +
+  labs(title="AMI") +
+  ylim(0,250) +
+  xlim(0,50)
+
+p9 = ggplot(agriv, aes(x=Cited.by)) +
+  geom_histogram() +
+  theme_light() +
+  labs(title="Agrivita") +
+  ylim(0,250) +
+  xlim(0,50)
+
+p10 = ggplot(hayati, aes(x=Cited.by)) +
+  geom_histogram() +
+  theme_light() +
+  labs(title="Hayati") +
+  ylim(0,250) +
+  xlim(0,50)
+
+grid.arrange(p1,p2,p3,p5,p6,p7,p8,p9,p10, ncol=5)
+
+
