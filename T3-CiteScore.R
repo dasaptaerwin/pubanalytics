@@ -11,14 +11,12 @@ row.names(df) <- df$source_short_title
 install.packages('tidyverse')
 install.packages('FactoMineR')
 install.packages('factoextra')
-install.packages("wesanderson") # color palette
 
 library('tidyverse')
 library('FactoMineR')
 library('factoextra')
 library('ggrepel') # for point labeling
 library('gridExtra')
-library('wesanderson')
 
 ## basic stats
 
@@ -324,12 +322,49 @@ jmfs = read.csv('prep_data/itb-jmfs.csv')
 tel =  read.csv('prep_data/telkomnika.csv')
 ternak =  read.csv('prep_data/j-peternakan.csv')
 muslim =  read.csv('prep_data/ij-muslimsoc.csv')
-ijog =  read.csv('prep_data/ij-og.csv')
-ijaseit =  read.csv('prep_data/ij-aseit.csv')
-ijg =  read.csv('prep_data/ij-geography.csv')
+ijog =  read.csv('prep_data/ijog.csv')
+ijaseit =  read.csv('prep_data/ijaseit.csv')
+ijg =  read.csv('prep_data/ijg.csv')
 medica =  read.csv('prep_data/j-actamedica.csv')
 agriv =  read.csv('prep_data/j-agrivita.csv')
 hayati =  read.csv('prep_data/j-hayati.csv')
+
+x <- summary(var)
+
+
+a = summary(jmfs$Year)
+a = data.frame(a=matrix(a),row.names=names(a))
+a
+b = summary(tel$Year)
+b = data.frame(b=matrix(b),row.names=names(b))
+b
+c = summary(ternak$Year)
+c = data.frame(c=matrix(c),row.names=names(c))
+c
+d = summary(muslim$Year)
+d = data.frame(d=matrix(d),row.names=names(d))
+d
+e = summary(ijog$Year)
+e = data.frame(e=matrix(e),row.names=names(e))
+e
+f = summary(ijaseit$Year)
+f = data.frame(f=matrix(f),row.names=names(f))
+f
+g = summary(ijg$Year)
+g = data.frame(g=matrix(g),row.names=names(g))
+g
+h = summary(medica$Year)
+h = data.frame(h=matrix(h),row.names=names(h))
+h
+i = summary(agriv$Year)
+i = data.frame(i=matrix(i),row.names=names(i))
+i
+j = summary(hayati$Year)
+j = data.frame(j=matrix(j),row.names=names(j))
+j
+
+art_summary = data.frame(a,b,c,d,e,f,g,h,i,j)
+write.csv(art_summary, file = "prep_data/art_summary.csv")
 
 ## plotting article distribution
 p1 = ggplot(jmfs, aes(x=Year)) +
@@ -338,69 +373,70 @@ p1 = ggplot(jmfs, aes(x=Year)) +
   labs(title="ITB JMFS+ITB JoS") +
   xlim(2005, 2018) +
   ylim(0, 350) 
-  
+p1  
 p2 = ggplot(tel, aes(x=Year)) +
   geom_bar(position=position_dodge(0.9))+
   theme_light() +
   labs(title="Telkomnika") +
   xlim(2005, 2018) +
   ylim(0, 350)
-
+p2
 p3 = ggplot(ternak, aes(x=Year)) +
   geom_bar(position=position_dodge(0.9))+
   theme_light() +
   labs(title="Media Peternakan") +
   xlim(2005, 2018) +
   ylim(0, 350)
-
+p3
 p4 = ggplot(muslim, aes(x=Year)) +
   geom_bar(position=position_dodge(0.9))+
   theme_light() +
   labs(title="IMS") +
   xlim(2005, 2018) +
   ylim(0, 350)
-
+p4
 p5 = ggplot(ijog, aes(x=Year)) +
   geom_bar(position=position_dodge(0.9))+
   theme_light() +
   labs(title="IJOG") +
   xlim(2005, 2018) +
   ylim(0, 350)
-
+p5
 p6 = ggplot(ijaseit, aes(x=Year)) +
   geom_bar(position=position_dodge(0.9))+
   theme_light() +
   labs(title="IJASEIT")+
+  xlim(2005, 2018) +
   ylim(0,350)
-
+p6
 p7 = ggplot(ijg, aes(x=Year)) +
   geom_bar(position=position_dodge(0.9))+
   theme_light() +
   labs(title="IJG") +
   xlim(2005, 2018) +
   ylim(0, 350)
-
+p7
 p8 = ggplot(medica, aes(x=Year)) +
   geom_bar(position=position_dodge(0.9))+
   theme_light() +
   labs(title="AMI") +
   xlim(2005, 2018) +
   ylim(0, 350)
-
+p8
 p9 = ggplot(agriv, aes(x=Year)) +
   geom_bar(position=position_dodge(0.9))+
   theme_light() +
   labs(title="Agrivita") +
   xlim(2005, 2018) +
   ylim(0, 350)
-
+p9
 p10 = ggplot(hayati, aes(x=Year)) +
   geom_bar(position=position_dodge(0.9))+
   theme_light() +
   labs(title="Hayati") +
   xlim(2005, 2018) +
   ylim(0, 350)
-
+p10
 grid.arrange(p1,p2,p3,p4,p5,p6,p7,p8,p9,p10, ncol=5)
 
 dev.off()
@@ -413,70 +449,69 @@ p1 = ggplot(jmfs, aes(x=Cited.by)) +
   labs(title="ITB JMFS+ITB JoS") +
   ylim(0,250) +
   xlim(0,50)
-
+p1
 p2 = ggplot(tel, aes(x=Cited.by)) +
   geom_histogram() +
   theme_light() +
   labs(title="Telkomnika") +
   ylim(0,250) +
   xlim(0,50)
-
+p2
 p3 = ggplot(ternak, aes(x=Cited.by)) +
   geom_histogram() +
   theme_light() +
   labs(title="Media Peternakan") +
   ylim(0,250) +
   xlim(0,50)
-
-p4 = ggplot(muslim, aes(x=Cited.by)) +
+p3
+# NA p4 = ggplot(muslim, aes(x=Cited.by)) +
   geom_histogram(stat='count') +
   theme_light() +
   labs(title="IMS") +
   ylim(0,250) +
   xlim(0,50)
-
 p5 = ggplot(ijog, aes(x=Cited.by)) +
   geom_histogram(stat='count') +
   theme_light() +
   labs(title="IJOG") +
   ylim(0,250) +
   xlim(0,50)
-
+p5
 p6 = ggplot(ijaseit, aes(x=Cited.by)) +
   geom_histogram() +
   theme_light() +
   labs(title="IJASEIT") +
   ylim(0,250) +
   xlim(0,50)
-
+p6
 p7 = ggplot(ijg, aes(x=Cited.by)) +
   geom_histogram() +
   theme_light() +
   labs(title="IJG") +
   ylim(0,250) +
   xlim(0,50)
-
+p7
 p8 = ggplot(medica, aes(x=Cited.by)) +
   geom_histogram() +
   theme_light() +
   labs(title="AMI") +
   ylim(0,250) +
   xlim(0,50)
-
+p8
 p9 = ggplot(agriv, aes(x=Cited.by)) +
   geom_histogram() +
   theme_light() +
   labs(title="Agrivita") +
   ylim(0,250) +
   xlim(0,50)
-
+p9
 p10 = ggplot(hayati, aes(x=Cited.by)) +
   geom_histogram() +
   theme_light() +
   labs(title="Hayati") +
   ylim(0,250) +
   xlim(0,50)
-
+p10
 grid.arrange(p1,p2,p3,p5,p6,p7,p8,p9,p10, ncol=5)
 
 
