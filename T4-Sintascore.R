@@ -56,3 +56,8 @@ summary(m)
 dd <- dist(scale(d[,5:12]), method = "euclidean")
 hc <- hclust(dd, method = "ward.D2")
 plot(hc, labels = d$name, hang = -1, cex = 0.6, ylab = "Height", xlab = "Name", col=as.factor(d$grup))
+
+install.packages('ape')
+library('ape')
+plot(as.phylo(hc), type = "unrooted", cex = 0.6,
+     no.margin = TRUE)
