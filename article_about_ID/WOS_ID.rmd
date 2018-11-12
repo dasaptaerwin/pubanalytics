@@ -1,14 +1,22 @@
 ---
-title: "articles covering Indonesia"
+title: "stacks of papers: the role of IR in advancing science"
 author: Dasapta Erwin Irawan
 date: Nov 13, 2018
 output: slidy_presentation
 ---
 
-articles covering Indonesia 
+presented
 =====
 
-Meet the team
+- at Faculty of Engineering, Universitas Sriwijaya
+- 13-14 Nov 2018
+
+got any papers?
+=====
+
+![dilan1990](got_any_papers.png){width=800px}
+
+meet the team
 =====
 
 - Dasapta Erwin Irawan (Institut Teknologi Bandung)
@@ -16,8 +24,21 @@ Meet the team
 - Lusia Marliana Nurani
 - Annisa
 
+goals 
+=====
+
+to give you a clue of:
+
+1. how big Indonesia is, in terms of science and publication,
+2. how it stands internationally,
+3. who's been writing articles about Indonesia,
+4. how to go OA to maximize your impact?
+5. how IR (institutional repository) might help you?
+
 methods
 =====
+
+general
 
 - we used Web of Science (WOS) and Dimensions (DIM) databases, 09 Nov 2018,
 - WOS is paid database, access provided by ITB
@@ -42,7 +63,7 @@ results: overview
 results: by type
 =====
 
-![treemap](filter1_intitle_type.jpg){width=800px}
+![treemap](filter1_intitle_type.jpg){width=700px}
 
 Using Dimensions database
 =====
@@ -63,33 +84,148 @@ results: overview
 results: by year
 =====
 
-![byyear](dim_intitle_byyear.png)
+![byyear](dim_intitle_byyear.png){width=500px}
+
+results: top 10 field of research
+=====
+
+![by field](dim_intitle_field.png){width=500px}
+
+results: top 10 authors
+=====
+
+![by researcher](dim_intitle_researcher.png){width=500px}
+
+results: sources
+=====
+
+![by sources](dim_intitle_source.png){width=500px}
 
 results: sum of citations
 =====
 
-![by citations](dim_intitle_bycitation.png)
+![by citations](dim_intitle_bycitation.png){width=500px}
 
 results: cited/not cited
 =====
 
-![by cited/not cited](dim_intitle_cited.png)
+![by cited/not cited](dim_intitle_cited.png){width=500px}
+
+results: highest citation
+=====
+
+- title: [Estimating Wealth Effects Without Expenditure Data--Or Tears: An Application to Educational Enrollments in States of India](https://app.dimensions.ai/details/publication/pub.1028396354?search_text=indonesia&search_type=kws&search_field=text_search&order=times_cited)
+- journal: [Demography](https://link.springer.com/article/10.1353%2Fdem.2001.0003)
+- year: 2001
+- authors: Deon Filmer (World Bank Group) and Lant H. Pritchett (Harvard University)
+- citations: 2.5 K
+- JIF 2017: 2.5+
 
 average citations per publications
 ======
 
-![by cited/not cited](dim_intitle_avgcited.png)
+![by cited/not cited](dim_intitle_avgcited.png){width=500px}
 
 RCR Score
 =====
 
 `The Relative Citation Ratio (RCR) is a citation-based measure of scientific influence of a publication. It is calculated as the citations of a paper, normalized to the citations received by NIH-funded publications in the same area of research and year [ref](https://dimensions.freshdesk.com/support/solutions/articles/23000012820-what-is-the-rcr-how-is-the-rcr-score-calculated-).`
 
-![RCR](dim_intitle_rcr.png)
+![RCR](dim_intitle_rcr.png){width=500px}
 
 FCR Score
 =====
 
 `The Field Citation Ratio (FCR) is a citation-based measure of scientific influence of one or more articles. It is calculated by dividing the number of citations a paper has received by the average number received by documents published in the same year and in the same Fields of Research (FoR) category. [ref](https://dimensions.freshdesk.com/support/solutions/articles/23000013157-what-is-the-fcr-how-is-it-calculated-)`
 
-![FCR](dim_intitle_fcr.png)
+![FCR](dim_intitle_fcr.png){width=500px}
+
+looking at the OA docs
+=====
+
+- 36,745 total docs
+
+source 
+=====
+
+![source](dim_OA_source.png){width=500px}
+
+
+researcher 
+=====
+
+![researcher](dim_OA_researcher.png){width=500px}
+
+field 
+=====
+
+![field](dim_OA_field.png){width=500px}
+
+
+highest citation{width=600px}
+=====
+
+- title: [Variations in Tropical Sea Surface Temperature and Surface Wind Fields Associated with the Southern Oscillation/El Niño](https://app.dimensions.ai/details/publication/pub.1004826383?search_text=indonesia&search_type=kws&search_field=text_search&order=times_cited&or_facet_open_access=True)
+- journal: [Monthly Weather Review](https://journals.ametsoc.org/doi/abs/10.1175/1520-0493%281982%29110%3C0354%3AVITSST%3E2.0.CO%3B2)
+- year: 1982
+- authors: Eugene M. Rasmusson and Thomas H. Carpenter
+- citations: 1.6 K
+- JIF 2017: 3.2+
+
+
+what about another country: eg Nigeria, Japan, Thailand, Malaysia
+=====
+
+- why don't we have a go
+
+what about another country: eg USA, UK, Canada, etc
+=====
+
+- why don't we have a go
+
+remarks
+=====
+
+- upstream vs downstream (closer to user)
+- OA means more readers (sometimes led to more citations)
+- how to go OA?
+
+how to go OA? 
+=====
+
+- publish in APC-based journals or `gold OA journals` (if you have the money)
+- what if you have less or no funding:
+  
+    - publish in no-APC journals or `diamond OA journals`
+    - publish in non-OA/paywalled journals but the preprint/`pre-peer reviewed version` (or accepted version) to your institutional repository (IR) or open-free repository (eg: INArxiv) but pls **check the journal's self-archiving policy** -- `green OA`
+
+OR
+=====
+
+you could just post your whole research files to IR and cite it in your papers ([ref](https://osf.io/srznb/)).
+
+![IR role in research](IR_research.jpg){width=500px}
+
+
+new slide 
+=====
+
+
+new slide 
+=====
+
+
+new slide 
+=====
+
+
+new slide 
+=====
+
+
+new slide 
+=====
+
+
+new slide 
+=====
