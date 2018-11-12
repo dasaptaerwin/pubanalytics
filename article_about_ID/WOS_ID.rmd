@@ -1,8 +1,11 @@
 ---
-title: "stacks of papers: the role of IR in advancing science"
-author: Dasapta Erwin Irawan
-date: Nov 13, 2018
-output: slidy_presentation
+title: 'stacks of papers: the role of IR in advancing science'
+author: "Dasapta Erwin Irawan"
+date: "Nov 13, 2018"
+output:
+  beamer_presentation: default
+  slidy_presentation:
+    footer: CC-BY, DEI
 ---
 
 presented
@@ -16,7 +19,7 @@ presented
 got any papers?
 =====
 
-![dilan1990](got_any_papers.png){width=800px}
+![dilan1990](got_any_papers.png){width=500px}
 
 let's shift our mindset
 =====
@@ -32,10 +35,10 @@ meet the (core) team
 
 this work is part of our project funded by Kemristekdikti
 
-- Dasapta Erwin Irawan (Institut Teknologi Bandung) [ORCID]()
-- Dini Sofiani Permatasari [GS](https://scholar.google.co.id/citations?user=zAMXg80AAAAJ&hl=en&oi=ao)
-- Lusia Marliana Nurani [GS](https://scholar.google.co.id/citations?user=Dhswtw8AAAAJ&hl=en&oi=ao)
-- Annisa
+- Dasapta Erwin Irawan (Institut Teknologi Bandung) ([ORCID](http://orcid.org/0000-0002-1526-0863))
+- Dini Sofiani Permatasari ([GS](https://scholar.google.co.id/citations?user=zAMXg80AAAAJ&hl=en&oi=ao))
+- Lusia Marliana Nurani ([GS](https://scholar.google.co.id/citations?user=Dhswtw8AAAAJ&hl=en&oi=ao))
+- Aidina Annisa ([IG](https://www.instagram.com/aidinasyauqi/?hl=en))
 
 goals 
 =====
@@ -76,7 +79,7 @@ overview
 by type
 =====
 
-![treemap](filter1_intitle_type.jpg){width=700px}
+![treemap](filter1_intitle_type.jpg){width=300px}
 
 Using Dimensions database
 =====
@@ -97,32 +100,32 @@ overview
 by year
 =====
 
-![byyear](dim_intitle_byyear.png){width=500px}
+![byyear](dim_intitle_byyear.png){width=300px}
 
 top 10 field of research
 =====
 
-![by field](dim_intitle_field.png){width=500px}
+![by field](dim_intitle_field.png){width=300px}
 
 top 10 authors
 =====
 
-![by researcher](dim_intitle_researcher.png){width=500px}
+![by researcher](dim_intitle_researcher.png){width=300px}
 
 sources
 =====
 
-![by sources](dim_intitle_source.png){width=500px}
+![by sources](dim_intitle_source.png){width=300px}
 
 sum of citations
 =====
 
-![by citations](dim_intitle_bycitation.png){width=500px}
+![by citations](dim_intitle_bycitation.png){width=300px}
 
 cited/not cited
 =====
 
-![by cited/not cited](dim_intitle_cited.png){width=500px}
+![by cited/not cited](dim_intitle_cited.png){width=300px}
 
 highest citation
 =====
@@ -137,21 +140,21 @@ highest citation
 average citations per publications
 ======
 
-![by cited/not cited](dim_intitle_avgcited.png){width=500px}
+![by cited/not cited](dim_intitle_avgcited.png){width=300px}
 
 RCR Score
 =====
 
 `The Relative Citation Ratio (RCR) is a citation-based measure of scientific influence of a publication. It is calculated as the citations of a paper, normalized to the citations received by NIH-funded publications in the same area of research and year [ref](https://dimensions.freshdesk.com/support/solutions/articles/23000012820-what-is-the-rcr-how-is-the-rcr-score-calculated-).`
 
-![RCR](dim_intitle_rcr.png){width=500px}
+![RCR](dim_intitle_rcr.png){width=300px}
 
 FCR Score
 =====
 
 `The Field Citation Ratio (FCR) is a citation-based measure of scientific influence of one or more articles. It is calculated by dividing the number of citations a paper has received by the average number received by documents published in the same year and in the same Fields of Research (FoR) category. [ref](https://dimensions.freshdesk.com/support/solutions/articles/23000013157-what-is-the-fcr-how-is-it-calculated-)`
 
-![FCR](dim_intitle_fcr.png){width=500px}
+![FCR](dim_intitle_fcr.png){width=300px}
 
 looking at the OA docs
 =====
@@ -161,21 +164,21 @@ looking at the OA docs
 source 
 =====
 
-![source](dim_OA_source.png){width=500px}
+![source](dim_OA_source.png){width=300px}
 
 
 researcher 
 =====
 
-![researcher](dim_OA_researcher.png){width=500px}
+![researcher](dim_OA_researcher.png){width=300px}
 
 field 
 =====
 
-![field](dim_OA_field.png){width=500px}
+![field](dim_OA_field.png){width=300px}
 
 
-highest citation{width=600px}
+highest citation{width=300px}
 =====
 
 - title: [Variations in Tropical Sea Surface Temperature and Surface Wind Fields Associated with the Southern Oscillation/El Niño](https://app.dimensions.ai/details/publication/pub.1004826383?search_text=indonesia&search_type=kws&search_field=text_search&order=times_cited&or_facet_open_access=True)
@@ -225,7 +228,7 @@ OR
 
 you could just post your whole research files to IR and cite it in your papers ([ref](https://osf.io/srznb/)).
 
-![IR role in research](IR_research.jpg){width=500px}
+![IR role in research](IR_research.jpg){width=300px}
 
 
 discussions 
