@@ -52,7 +52,7 @@ At the moment, we have designed four working packages (WP), but we may make anot
 
 ### T5: Who've been writing about Indonesia? 
 
-A quick search and overview on papers telling story about Indonesia, based on Dimensions and WOS databases. Pls proceed to the [project folder](https://github.com/dasaptaerwin/pubanalytics/tree/master/article_about_ID) or [RMD slides](https://github.com/dasaptaerwin/pubanalytics/blob/master/article_about_ID/WOS_ID.rmd), or PDF slides.
+A quick search and overview on papers telling story about Indonesia, based on Dimensions and WOS databases. Pls proceed to the [project folder](https://github.com/dasaptaerwin/pubanalytics/tree/master/article_about_ID) or [RMD slides](https://github.com/dasaptaerwin/pubanalytics/blob/master/article_about_ID/WOS_ID.rmd), or [PDF slides](https://github.com/dasaptaerwin/pubanalytics/blob/master/article_about_ID/WOS_ID.pdf).
 
 ## Expected outcome
 
