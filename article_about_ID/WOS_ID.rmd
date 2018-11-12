@@ -10,18 +10,31 @@ presented
 
 - at Faculty of Engineering, Universitas Sriwijaya
 - 13-14 Nov 2018
+- [link to slide](https://github.com/dasaptaerwin/pubanalytics/tree/master/article_about_ID) (open the PDF file)
+- [link to complete project](https://github.com/dasaptaerwin/pubanalytics)
 
 got any papers?
 =====
 
 ![dilan1990](got_any_papers.png){width=800px}
 
-meet the team
+let's shift our mindset
 =====
 
-- Dasapta Erwin Irawan (Institut Teknologi Bandung)
-- Dini Sofiani Permatasari
-- Lusia Marliana Nurani
+`publish (in top journals) or perish`
+
+to
+
+`#terbukaatautertinggal`
+
+meet the (core) team
+=====
+
+this work is part of our project funded by Kemristekdikti
+
+- Dasapta Erwin Irawan (Institut Teknologi Bandung) [ORCID]()
+- Dini Sofiani Permatasari [GS](https://scholar.google.co.id/citations?user=zAMXg80AAAAJ&hl=en&oi=ao)
+- Lusia Marliana Nurani [GS](https://scholar.google.co.id/citations?user=Dhswtw8AAAAJ&hl=en&oi=ao)
 - Annisa
 
 goals 
@@ -53,14 +66,14 @@ using WOS
 - cascade filtering: `in title`, `open access` only, `article` and `proceeding papers` only 
 
 
-results: overview
+overview
 =====
 
 - filter: `in title`
 - results: `22,118` docs, only `4,760` OA
 - source data: filter1_intitle_type.txt
 
-results: by type
+by type
 =====
 
 ![treemap](filter1_intitle_type.jpg){width=700px}
@@ -74,44 +87,44 @@ methods
 - keywords: `Indonesia`, 
 - cascade filtering: `in title and abstract only`, `open access` only, `article` and `proceeding papers` only 
 
-results: overview
+overview
 =====
 
 - filter: `in title and abstract`
 - results: `88,138` docs,  `36,745` OA
 - source data: dim_intitle_type.txt
 
-results: by year
+by year
 =====
 
 ![byyear](dim_intitle_byyear.png){width=500px}
 
-results: top 10 field of research
+top 10 field of research
 =====
 
 ![by field](dim_intitle_field.png){width=500px}
 
-results: top 10 authors
+top 10 authors
 =====
 
 ![by researcher](dim_intitle_researcher.png){width=500px}
 
-results: sources
+sources
 =====
 
 ![by sources](dim_intitle_source.png){width=500px}
 
-results: sum of citations
+sum of citations
 =====
 
 ![by citations](dim_intitle_bycitation.png){width=500px}
 
-results: cited/not cited
+cited/not cited
 =====
 
 ![by cited/not cited](dim_intitle_cited.png){width=500px}
 
-results: highest citation
+highest citation
 =====
 
 - title: [Estimating Wealth Effects Without Expenditure Data--Or Tears: An Application to Educational Enrollments in States of India](https://app.dimensions.ai/details/publication/pub.1028396354?search_text=indonesia&search_type=kws&search_field=text_search&order=times_cited)
@@ -181,7 +194,7 @@ what about another country: eg Nigeria, Japan, Thailand, Malaysia
 what about another country: eg USA, UK, Canada, etc
 =====
 
-- why don't we have a go
+- why don't we have a go.
 
 remarks
 =====
@@ -189,6 +202,14 @@ remarks
 - upstream vs downstream (closer to user)
 - OA means more readers (sometimes led to more citations)
 - how to go OA?
+
+remarks (2)
+=====
+
+- there are more papers about Indonesia: ID vs EN language papers
+- local topic vs international interests
+- there are more ways to disseminate your results than only put it as papers
+
 
 how to go OA? 
 =====
@@ -207,25 +228,11 @@ you could just post your whole research files to IR and cite it in your papers (
 ![IR role in research](IR_research.jpg){width=500px}
 
 
-new slide 
+discussions 
 =====
 
+I invite questions, comments, feedback.
 
-new slide 
-=====
+you can send me emails to: `dasaptaerwin3` at gmail
 
-
-new slide 
-=====
-
-
-new slide 
-=====
-
-
-new slide 
-=====
-
-
-new slide 
-=====
+or mention me on Twitter: [@dasaptaerwin](https://twitter.com/dasaptaerwin)

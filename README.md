@@ -50,6 +50,10 @@ At the moment, we have designed four working packages (WP), but we may make anot
 1. We selected the records of Indonesian journals in the Cite Score database,
 2. Explore the characteristics of their publishing system with some metric as indicator of their impact. 
 
+### T5: Who've been writing about Indonesia? 
+
+A quick search and overview on papers telling story about Indonesia, based on Dimensions and WOS databases.
+
 ## Expected outcome
 
 `added later`
@@ -74,3 +78,4 @@ We implement a literate programming schema to this project. Therefore, we combin
 2. T2_pubanalytics.ipynb for Theme 2
 3. T3_pubanalytics.ipynb for Theme 3
 4. T4_pubanalytics.ipynb for Theme 4
+5. [T5_pubanalytics folder](https://github.com/dasaptaerwin/pubanalytics/tree/master/article_about_ID)    Theme 5 Pls open the PDF file for beamer slides
