@@ -177,6 +177,26 @@ field
 
 ![field](dim_OA_field.png){width=300px}
 
+by year
+=====
+
+![byyear](dim_OA_pub.png){width=300px}
+
+by year
+=====
+
+![byyear](dim_OA_pub.png){width=300px}
+
+sum of citations
+=====
+
+![by citations](dim_OA_citation.png){width=300px}
+
+average citation
+=====
+
+![by citations](dim_oa_avgcitation.png){width=300px}
+
 
 highest citation{width=300px}
 =====
