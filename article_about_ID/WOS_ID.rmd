@@ -81,7 +81,13 @@ by type
 
 ![treemap](filter1_intitle_type.jpg){width=300px}
 
-Using Dimensions database
+and then I changed my mind
+=====
+
+why not use free database?
+
+
+using Dimensions database
 =====
 
 methods
