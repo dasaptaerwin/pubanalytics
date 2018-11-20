@@ -1,3 +1,12 @@
+# Script sederhana untuk menganalisis data sitasi artikel
+# Oleh: Dasapta Erwin Irawan
+
+# Tujuan: untuk mengetahui apakah ada perbedaan perilaku sitasi artikel pada berbagai bidang ilmu
+
+# Metode: menggunakan database scopus, menggunakan kata kunci "climate change", "paleontology" "sedimentology", "structural geology"
+
+# filter: in title, abstract and keywords; only article; periode 2016-2017.
+
 d = read.csv('citescore_anl/scopus_climate_allyears.csv')
 plot(d$age, d$Cited.by) 
 corel <- lm(d$Cited.by~d$age)

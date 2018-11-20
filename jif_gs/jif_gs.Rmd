@@ -1,0 +1,19 @@
+---
+title: "tentang sitiran: distribusi artikel, penerbit, dan jumlah sitasinya (bagian 1)"
+author: "Dasapta Erwin Irawan"
+date: "11/20/2018"
+output: html_document
+---
+
+Kali ini kami akan sampaikan sedikit cerita dari eksperimen ringkas kami di tahun 2018. Nantinya akan kami kirim juga ke jurnal, agar sah. :)
+
+![mesin ketik]()
+mesin ketik antik (pxhere, lisensi CC-0)
+
+---
+
+Latar belakang
+Di luar masalah indeksasi dan lain-lain, kami mencoba melakukan eksperimen untuk mengetahui posisi jurnal, penerbit, dan jumlah sitasinya. Seperti diketahui, jumlah sitasi saat ini diperjuangkan oleh mayoritas ilmuwan untuk mendapatkan pengakuan atas hasil risetnya. Dengan kata lain, reputasi peneliti akan ditentukan, salah satunya, oleh jumlah sitasi yang biasanya dinyatakan sebagai H-indeks. Perlombaan meraih H-indeks ini sepertinya belum akan berakhir, karena para Pemberi Dana (funder atau sponsor), termasuk Kemristekdikti, masih memasang nilai H-indeks sebagai batas antara peneliti yang eligibel untuk mengirimkan proposal dengan yang tidak.
+Apakah penerbit tertentu mendominasi sirkuit perlombaan jumlah? Kami membagi artikel ini menjadi tiga atau lima bagian berdasarkan bidang ilmu, agar lebih mudah dan cepat untuk dibaca. Tentunya ini akan terkait juga angka Journal Impact Factor yang sangat terkenal sekaligus kontroversial. Selain eksperimen ini, kami juga melakukan eksperimen menggunakan data CiteScore dikaitkan dengan posisi jurnal dari Indonesia yang masuk di dalamnya.
+Metode 
+Kegiatan ini merupakan bagian dari Riset Dikti tahun 2018 yang kami lakukan dengan Tim Utama: Dasapta Erwin Irawan (saya sendiri), Dini Sofiani Permatasari, dan Lusia Marliana Nurani, dibantu Aidina Annisa sebagai asisten riset. Walaupun tim utama berasal dari Institut Teknologi Bandung, tetapi kami juga mendapatkan bantuan ide dan teknik analisis dari beberapa orang dari berbagai instansi, diantaranya: M. Tanzil Multazam dari Umsida, Eko Didik Widianto dari Undip, Rachmat Hidayat dari Universitas Andalas, M. Ratodi dari UIN Sunan Ampel, Busro dari UIN Sunan Gunung Djati, Juneman Abraham dari Universitas Binus
