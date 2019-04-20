@@ -1,0 +1,38 @@
+---
+title: "Analisis data sitasi beberapa jurnal Indonesia"
+output: html_notebook
+date: April 17, 2019
+author: Dasapta Erwin Irawan, Juneman Abraham, Lusia Marliani, Dini Sofiani Permatasari
+---
+
+# Latar Belakang
+Sebanyak 40 jurnal Indonesia telah masuk ke dalam perhitungan Cite Score (CS) 2017, yang diterbikan pada bulan April 2018. Berikut ini adalah upaya kami untuk menganalisis data sitasi di beberapa jurnal yang telah masuk daftar CS (lihat tabel di bawah ini). [Daftar CS versi April 2018](https://blog.scopus.com/posts/citescore-2017-metrics-now-available) bisa diunduh secara gratis.
+
+Tabel 1 Daftar jurnal Indonesia yang masuk Cite Score 2017
+
+
+Cite Score adalah metric jurnal (journal level metric) yang diterbitkan oleh [Elsevier](elsevier.com). Metrik ini diterbitkan tiap tahun untuk menjelaskan posisi jurnal pada tahun sebelumnya, misal: CS 2017 terbit di bulan April 2018, CS 2016 terbit di tahun 2017, dan seterusnya. Bahan baku CS masih mirip dengan [Journal Impact Factor (JIF)](https://en.m.wikipedia.org/wiki/Impact_factor), yakni jumlah sitasi dan jumlah artikel yang terbit pada kurun waktu tertentu. CS memberikan beberapa modifikasi dan menyandingkannya dengan skor [Source Normalized Impact per Paper atau SNIP](http://www.journalindicators.com/) yang dibuat oleh CWTS Leiden University. Elsevier mengklaim CS lebih obyektifdibanding metrik level jurnal lainnya ([FAQ Cite Score](https://journalmetrics.scopus.com/index.php/Faqs)). 
+
+# Metode
+Kami memilih **10 jurnal** Indonesia dari daftar CS yang kami pilih berdasarkan gabungan beberapa bidang: kesehatan-kedokteran, ilmu hayati, ilmu kebumian, dan ilmu keteknikan. Tabel berikut ini berisi daftar jurnal yang kami analisis.
+
+Tabel 2 
+
+
+bidang Berdasarkan beberapa data Scopus melalui layanan yang diberikan oleh Institut Teknologi Bandung dan University of Sydney, kami mengambil data dari Scopus, menyimpannya sebagai csv file, dan menganalisisnya menggunakan R pada platform Jupyter.
+
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+

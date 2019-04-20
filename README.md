@@ -1,15 +1,26 @@
+---
+title: "Readme: Publication analytics project"
+output: html_notebook
+date: April 17, 2018
+author: Dasapta Erwin Irawan (ITB), Juneman Abraham (ITB), Lusia Marliani (ITB), Dini Sofiani Permatasari (ITB)
+---
 
 Publication Analytics project
----
+===
 
 # Introduction
 This repo stores all materials for publication analytics project, funded by The Ministry of Research and Higher Education of Indonesia 2018. It is connected to the [Open Paleo](https://github.com/Meta-Paleo/OpenPaleo) project initiated by Jon Tennant. 
 The PubAnalytics Project team:
-- PI: Dasapta Erwin Irawan
-- Collaborators: 
-    - Dini Sofiani Permatasari
-    - Lusia Nurani
+- Contributions:
+  - Dasapta Erwin Irawan: ideas, methodology, R coding
+  - Juneman Abraham: ideas, analysis
+  - Lusia Marliani and Dini Sofiani Permatasari: data integrator
+  - Aidinia Annisa: raw data harvesting 
+
+- Contributors:
     - Eko Didik (Undip)
+    - M. Tanzil Multazam (Umsida)
+    - etc
 
 # Project concept
 
