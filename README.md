@@ -1,30 +1,48 @@
 ---
-title: "Readme: Publication analytics project"
-output: html_notebook
-date: April 17, 2018
-author: Dasapta Erwin Irawan (ITB), Juneman Abraham (ITB), Lusia Marliani (ITB), Dini Sofiani Permatasari (ITB)
+title: 'Readme: Publication analytics project'
+author: Dasapta Erwin Irawan (ITB), Juneman Abraham (ITB), Lusia Marliana Nurani (ITB), Dini
+  Sofiani Permatasari (ITB)
+date: "April 17, 2018"
+editor_options:
+  chunk_output_type: inline
 ---
 
 Publication Analytics project
 ===
 
 # Introduction
-This repo stores all materials for publication analytics project, funded by The Ministry of Research and Higher Education of Indonesia 2018. It is connected to the [Open Paleo](https://github.com/Meta-Paleo/OpenPaleo) project initiated by Jon Tennant. 
-The PubAnalytics Project team:
-- Contributions:
-  - Dasapta Erwin Irawan: ideas, methodology, R coding
-  - Juneman Abraham: ideas, analysis
-  - Lusia Marliani and Dini Sofiani Permatasari: data integrator
-  - Aidinia Annisa: raw data harvesting 
 
-- Contributors:
-    - Eko Didik (Undip)
-    - M. Tanzil Multazam (Umsida)
-    - etc
+Trend `scopas-scopus` will not be over soon. This plot from Google Trend shows the usage of `scopus journal` and `jurnal scopus` from Indonesia since 2004. 
+
+![Google trend scopus in Indonesia since 2004, data from 170419](fig_01_scopusid.png)
+
+We're not blaming anyone, because the whole world is doing the same thing. 
+
+![Google trend scopus worldwide since 2004, data from 170419](fig_02_scopusww.png)
+
+# About this repository
+
+This repo stores all materials for publication analytics project, funded by The Ministry of Research and Higher Education of Indonesia 2018. It is connected with the [Open Paleo](https://github.com/Meta-Paleo/OpenPaleo) project initiated by Jon Tennant. We build this repo to give more examples of reproducible research. 
+
+# Project team and contributors
+
+The PubAnalytics Project team:
+
+- Dasapta Erwin Irawan [GS](https://scholar.google.com/citations?hl=en&user=Myvc78MAAAAJ&view_op=list_works&sortby=pubdate) [ORCID](https://orcid.org/0000-0002-1526-0863): ideas, methodology, R coding
+- Juneman Abraham [GS](https://scholar.google.com/citations?hl=en&user=QHRk4KYAAAAJ&view_op=list_works&sortby=pubdate) [ORCID](http://orcid.org/0000-0003-0232-2735): ideas, analysis
+- [Lusia Marliana Nurani](https://scholar.google.co.id/citations?user=Dhswtw8AAAAJ&hl=en&oi=ao) and [Dini Sofiani Permatasari](https://scholar.google.co.id/citations?user=zAMXg80AAAAJ&hl=en): data integrator
+- [Aidinia Annisa](https://www.instagram.com/aidinasyauqi/?hl=en): raw data harvesting 
+
+Contributors:
+- Eko Didik (Undip)
+- M. Tanzil Multazam (Umsida)
+- Ikhwan Arief (UNP)
+- etc
 
 # Project concept
 
 ## Problem
+
 Indonesian universities and research institutions are now trying to put their names at several known rankings. One of the criteria they promote to Indonesian researchers is H-index. Using [SINTA platform](sinta2.ristekdikti.go.id), they rank researchers based on their SINTA scores, which are calculated from Google Scholar profiles and ScopusID profiles. From each profile, the H-index is calculated to form SINTA score. That said, here we argue that to rank H-index is the best way to measure researchers' impact and rank their productivity, following these conditions: 
 
 - high disparity of research facilities. Research facilities in western Indonesia is better than the ones in the eastern part.
